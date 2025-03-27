@@ -22,4 +22,4 @@ jobs:
 
     - name: Run script
       run: |
-        python script.py  # Выполнить ваш Python-скрипт
+        python -u script.py  # Выполнить ваш Python-скрипт
