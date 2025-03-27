@@ -1,0 +1,25 @@
+name: Request Combinations
+
+on:
+  workflow_dispatch:  # Запуск вручную
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest  # Работает в облачной среде Linux
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3  # Получить код из репозитория
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'  # Установка версии Python
+
+    - name: Install dependencies
+      run: |
+        pip install requests  # Установить библиотеку requests
+
+    - name: Run script
+      run: |
+        python script.py  # Выполнить ваш Python-скрипт
