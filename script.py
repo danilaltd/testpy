@@ -11,7 +11,7 @@ combinations = filter(lambda x: x[0] != x[1] and x[1] != x[2], combinations)
 
 for combination in combinations:
     a = ''.join(combination)
-    if (a[0] in "абвгдеёжзийклмнопрстуфхцчш"):
+    if (a[0] in "абвгдеёжзийклмнопрстуфхцчшщъыьэ"):
         continue
     url = f"https://pass.rw.by/ru/ajax/autocomplete/search/?term={a}"
     response = requests.get(url)
